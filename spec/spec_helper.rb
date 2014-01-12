@@ -1,4 +1,4 @@
 $: << File.expand_path("../..", __FILE__)
 
-require "main"
+require "automaton"
 

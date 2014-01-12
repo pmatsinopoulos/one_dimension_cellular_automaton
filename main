@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+
+$: << File.expand_path("..", __FILE__)
+
+require "automaton"
+
+if ARGV.size != 2 || ARGV[0].to_i < 1 || ARGV[1].to_i < 1
+  Automaton.print_help
+  exit(1)
+end
+
+automaton = Automaton.new(ARGV[0].to_i, ARGV[1].to_i)
+automaton.run
+
+
